@@ -123,6 +123,13 @@ img {
     margin: 0;
 }
 
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 .profile-bio{
     font-size: 1.6rem;
     font-weight: 400;
@@ -190,8 +197,31 @@ img {
     border-bottom-color: transparent;
     border-radius: 50%;
     margin: 0 auto;
-    animation: loader 500ms linear infinite;
+    animation: loader 500ms  linear infinite;
 }
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 3rem;
+    align-items: center;
+}
+
+.profile-iagme {
+    grid-row: 1 / -1;
+}
+
+.profile-iagme,
+.profile-user-settings,
+.profile-stats,
+.profile-bio
+.profile-item,
+.gallery {
+    width: auto;
+    margin: 0;
+}
+
 
 
 
